@@ -9,6 +9,7 @@
         <item name="colorSecondary">@color/teal_200</item>
         <item name="colorSecondaryVariant">@color/teal_700</item>
         <item name="colorOnSecondary">@color/black</item>
+
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
@@ -22,4 +23,32 @@
     <style name="Theme.CurrancyConversion.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="Theme.CurrancyConversion.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+<!--    TextStyles-->
+    <style name="tv_screen_title_custom_color">
+        <item name="android:textColor">@color/design_default_color_primary_dark</item>
+        <item name="android:textSize">@dimen/_20ssp</item>
+        <item name="android:gravity">center</item>
+    </style>
+<!--    EditTextStyles-->
+    <style name="et_layout_main">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="background">@android:color/transparent</item>
+        <item name="boxStrokeWidth">0dp</item>
+        <item name="boxStrokeWidthFocused">0dp</item>
+        <item name="android:textColorHint">@color/hint</item>
+    </style>
+    <style name="et_main">
+        <item name="android:textColor">@color/design_default_color_primary</item>
+        <item name="android:textSize">@dimen/_15ssp</item>
+        <item name="android:textAlignment">viewStart</item>
+        <item name="android:background">@drawable/bg_et</item>
+    </style>
+
+    <style name="et_Spinner">
+        <item name="android:textColor">@color/design_default_color_primary</item>
+        <item name="android:textSize">@dimen/_15ssp</item>
+        <item name="android:textAlignment">viewStart</item>
+    </style>
+
 </resources>

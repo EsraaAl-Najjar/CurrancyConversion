@@ -3,6 +3,7 @@ package com.softic.esraa.elnajjar.di
 import android.content.Context
 import com.google.gson.GsonBuilder
 import com.softic.esraa.elnajjar.BuildConfig
+import com.softic.esraa.elnajjar.data.retrofit.CurrencyApiInterface
 import com.softic.esraa.elnajjar.utils.Utility
 import dagger.Module
 import dagger.Provides
@@ -25,6 +26,10 @@ object RetrofitModule {
             .addConverterFactory(GsonConverterFactory.create(GsonBuilder().create()))
             .client(Utility.getUnsafeOkHttpClient(applicationContext))
             .build()
+
+    @Provides
+    fun provideCurrencyApiInterface(retrofit: Retrofit): CurrencyApiInterface =
+        retrofit.create(CurrencyApiInterface::class.java)
 
 
 }
