@@ -23,9 +23,11 @@ android {
         dev {
             dimension = 'Environment'
             applicationIdSuffix = ".dev"
+            buildConfigField "String", "BASE_URL", "\"https://data.fixer.io/api/\""
         }
         prod {
             dimension = 'Environment'
+            buildConfigField "String", "BASE_URL", "\"https://data.fixer.io/api/\""
         }
     }
 
@@ -86,7 +88,7 @@ dependencies {
 
     //dimension
     implementation "com.intuit.ssp:ssp-android:$dimensionIntuitVersion"
-    implementation "0com.intuit.sdp:sdp-android:$dimensionIntuitVersion"
+    implementation "com.intuit.sdp:sdp-android:$dimensionIntuitVersion"
 
     //Coroutine
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutineVersion"
