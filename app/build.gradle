@@ -1,0 +1,97 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+    id 'dagger.hilt.android.plugin'
+}
+
+android {
+    compileSdk rootProject.compileSdkVersion
+    buildToolsVersion "30.0.3"
+    defaultConfig {
+        applicationId "com.softic.esraa.elnajjar"
+        minSdk rootProject.minSdkVersion
+        targetSdk rootProject.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+        vectorDrawables.useSupportLibrary = true
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    flavorDimensions "Environment"
+    productFlavors {
+        dev {
+            dimension = 'Environment'
+            applicationIdSuffix = ".dev"
+        }
+        prod {
+            dimension = 'Environment'
+        }
+    }
+
+    buildFeatures {
+        viewBinding = true
+    }
+    buildTypes {
+        debug {
+            debuggable true
+        }
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    buildFeatures {
+        viewBinding true
+    }
+}
+
+dependencies {
+
+    implementation "androidx.core:core-ktx:$coreKTXVersion"
+    implementation "androidx.appcompat:appcompat:$appCompat_Fragment_Version"
+    implementation "androidx.fragment:fragment-ktx:$appCompat_Fragment_Version"
+    implementation "com.google.android.material:material:$materialVersion"
+    implementation "androidx.constraintlayout:constraintlayout:$constraintLayoutVersion"
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:$lifeCycleLiveDataVersion"
+
+
+    // Navigation
+    implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
+    implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
+    // Jetpack Compose Integration
+    implementation "androidx.navigation:navigation-compose:$nav_version"
+
+
+    //hilt
+    implementation "com.google.dagger:hilt-android:$hiltVersion"
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.1'
+    kapt "com.google.dagger:hilt-compiler:$hiltVersion"
+
+    //retrofit
+    implementation "com.squareup.retrofit2:retrofit:$retrofitVersion"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofitVersion"
+    implementation "com.squareup.okhttp3:logging-interceptor:$okHTTPVersion"
+
+    // Stetho For Debug Option With Api Failure
+    implementation "com.facebook.stetho:stetho:$stethoVersion"
+    implementation "com.facebook.stetho:stetho-okhttp3:$stethoVersion"
+
+    //dimension
+    implementation "com.intuit.ssp:ssp-android:$dimensionIntuitVersion"
+    implementation "0com.intuit.sdp:sdp-android:$dimensionIntuitVersion"
+
+    //Coroutine
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutineVersion"
+
+    testImplementation 'junit:junit:4.+'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+}
