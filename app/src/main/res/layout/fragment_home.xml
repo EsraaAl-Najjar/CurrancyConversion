@@ -26,43 +26,43 @@
         style="@style/tv_screen_title_custom_color"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/from"
         android:layout_marginTop="@dimen/_5sdp"
-        app:layout_constraintStart_toStartOf="parent"
+        android:text="@string/from"
         app:layout_constraintEnd_toStartOf="@id/guideline2"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline" />
 
-   <!-- <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/spFromCurrency"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/_16sdp"
-        app:hintEnabled="false"
-        android:background=""
-        app:endIconDrawable="@drawable/ic_down_arrow"
-        app:endIconMode="custom"
-        app:endIconTint="@color/black"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/guideline2"
-        app:layout_constraintTop_toBottomOf="@id/tvFrom"
+    <!-- <com.google.android.material.textfield.TextInputLayout
+         android:id="@+id/spFromCurrency"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_marginTop="@dimen/_16sdp"
+         app:hintEnabled="false"
+         android:background=""
+         app:endIconDrawable="@drawable/ic_down_arrow"
+         app:endIconMode="custom"
+         app:endIconTint="@color/black"
+         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintEnd_toStartOf="@id/guideline2"
+         app:layout_constraintTop_toBottomOf="@id/tvFrom"
 
-        style="@style/Base.Widget.AppCompat.DropDownItem.Spinner"
-        android:hint="@string/from">
-        <AutoCompleteTextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="none"
-            android:textColor="@color/white"
-            />
+         style="@style/Base.Widget.AppCompat.DropDownItem.Spinner"
+         android:hint="@string/from">
+         <AutoCompleteTextView
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:inputType="none"
+             android:textColor="@color/white"
+             />
 
-    </com.google.android.material.textfield.TextInputLayout>-->
+     </com.google.android.material.textfield.TextInputLayout>-->
     <androidx.appcompat.widget.AppCompatSpinner
         android:id="@+id/spFromCurrency"
         style="@style/Base.Widget.AppCompat.DropDownItem.Spinner"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/design_default_color_primary"
         android:layout_marginTop="@dimen/_16sdp"
+        android:backgroundTint="@color/design_default_color_primary"
         android:hint="@string/from"
         app:layout_constraintEnd_toStartOf="@id/guideline2"
         app:layout_constraintStart_toStartOf="parent"
@@ -87,68 +87,67 @@
             style="@style/et_main"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/from"
-            android:inputType="number"
+            android:inputType="numberDecimal"
             android:paddingTop="@dimen/_5sdp"
-            android:singleLine="true" />
+            android:singleLine="true"
+            android:text="@string/default_value_for_base_1" />
     </com.google.android.material.textfield.TextInputLayout>
 
-<!--    to currency -->
+    <!--    to currency -->
     <TextView
         android:id="@+id/tvTo"
         style="@style/tv_screen_title_custom_color"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/to"
         android:layout_marginTop="@dimen/_5sdp"
+        android:text="@string/to"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/guideline2"
-        app:layout_constraintTop_toTopOf="@+id/guideline"/>
+        app:layout_constraintTop_toTopOf="@+id/guideline" />
 
-  <!--  <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/spToCurrency"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@color/white"
-        app:hintEnabled="false"
-        android:layout_marginTop="@dimen/_16sdp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/guideline2"
-        app:layout_constraintTop_toBottomOf="@+id/tvTo"
-        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
-        android:hint="@string/to">
-        <AutoCompleteTextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="none"
-            android:textColor="@color/white"
-            />
-    </com.google.android.material.textfield.TextInputLayout>-->
+    <!--  <com.google.android.material.textfield.TextInputLayout
+          android:id="@+id/spToCurrency"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:background="@color/white"
+          app:hintEnabled="false"
+          android:layout_marginTop="@dimen/_16sdp"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toEndOf="@id/guideline2"
+          app:layout_constraintTop_toBottomOf="@+id/tvTo"
+          style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+          android:hint="@string/to">
+          <AutoCompleteTextView
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:inputType="none"
+              android:textColor="@color/white"
+              />
+      </com.google.android.material.textfield.TextInputLayout>-->
 
     <androidx.appcompat.widget.AppCompatSpinner
         android:id="@+id/spToCurrency"
+        style="@style/Base.Widget.AppCompat.DropDownItem.Spinner"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/design_default_color_primary"
         android:layout_marginTop="@dimen/_16sdp"
+        android:backgroundTint="@color/design_default_color_primary"
+        android:hint="@string/to"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/guideline2"
-        app:layout_constraintTop_toBottomOf="@+id/tvTo"
-        style="@style/Base.Widget.AppCompat.DropDownItem.Spinner"
-        android:hint="@string/to"/>
+        app:layout_constraintTop_toBottomOf="@+id/tvTo" />
 
     <androidx.appcompat.widget.AppCompatImageButton
         android:id="@+id/btn_swap_currency"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
 
-        app:layout_constraintStart_toEndOf="@id/spFromCurrency"
-        app:layout_constraintTop_toTopOf="@id/spFromCurrency"
-        app:layout_constraintEnd_toStartOf="@id/spToCurrency"
-        app:layout_constraintBottom_toBottomOf="@id/spFromCurrency"
         android:background="@drawable/bg_btn"
         android:src="@drawable/ic_baseline_swap"
-        />
+        app:layout_constraintBottom_toBottomOf="@id/spFromCurrency"
+        app:layout_constraintEnd_toStartOf="@id/spToCurrency"
+        app:layout_constraintStart_toEndOf="@id/spFromCurrency"
+        app:layout_constraintTop_toTopOf="@id/spFromCurrency" />
 
     <!-- To  -->
     <com.google.android.material.textfield.TextInputLayout
@@ -156,8 +155,8 @@
         style="@style/et_layout_main"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/_25sdp"
         android:layout_marginStart="@dimen/_8sdp"
+        android:layout_marginTop="@dimen/_25sdp"
         android:gravity="center"
         app:hintEnabled="false"
         app:layout_constraintEnd_toEndOf="parent"
@@ -170,7 +169,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/to"
-            android:inputType="number"
+            android:inputType="numberDecimal"
             android:paddingTop="@dimen/_5sdp"
             android:singleLine="true" />
 
@@ -186,19 +185,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/spToCurrency" />
 
-
-
-    <!--  <ProgressBar
-          android:id="@+id/progressBar"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:visibility="gone"
-          app:layout_constraintBottom_toBottomOf="@+id/btnConvert"
-          app:layout_constraintEnd_toStartOf="@+id/btnConvert"
-          app:layout_constraintHorizontal_bias="0.959"
-          app:layout_constraintStart_toStartOf="parent"
-          app:layout_constraintTop_toTopOf="@+id/btnConvert"
-          app:layout_constraintVertical_bias="1.0"
-          tools:visibility="visible" />-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>

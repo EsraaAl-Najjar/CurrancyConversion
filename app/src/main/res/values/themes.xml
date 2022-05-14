@@ -50,5 +50,7 @@
         <item name="android:textSize">@dimen/_15ssp</item>
         <item name="android:textAlignment">viewStart</item>
     </style>
-
+    <style name="ProgressBarTheme" parent="ThemeOverlay.AppCompat.Light">
+        <item name="colorAccent">@color/design_default_color_primary</item>
+    </style>
 </resources>

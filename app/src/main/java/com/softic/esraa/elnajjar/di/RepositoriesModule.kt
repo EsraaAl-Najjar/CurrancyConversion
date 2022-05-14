@@ -20,6 +20,6 @@ object RepositoriesModule {
         currencyApiInterface: CurrencyApiInterface,
         @ApplicationContext applicationContext: Context
     ) =
-        CurrencyRepository(currencyApiInterface, applicationContext)
+        CurrencyRepository(applicationContext, currencyApiInterface)
 
 }

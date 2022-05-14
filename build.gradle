@@ -27,6 +27,7 @@ ext {
     minSdkVersion = 23
     targetSdkVersion = 31
     compileSdkVersion = 31
+    buildToolsVersion = "30.0.3"
 
     coreKTXVersion = '1.7.0'
     appCompat_Fragment_Version = '1.4.1'

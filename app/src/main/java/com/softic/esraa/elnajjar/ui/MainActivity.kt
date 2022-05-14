@@ -1,21 +1,17 @@
 package com.softic.esraa.elnajjar.ui
 
 import android.os.Bundle
-import android.view.Menu
-import com.google.android.material.snackbar.Snackbar
-import com.google.android.material.navigation.NavigationView
-import androidx.navigation.findNavController
-import androidx.navigation.ui.AppBarConfiguration
-import androidx.navigation.ui.navigateUp
-import androidx.navigation.ui.setupActionBarWithNavController
-import androidx.navigation.ui.setupWithNavController
-import androidx.drawerlayout.widget.DrawerLayout
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.NavController
 import androidx.navigation.NavDestination
+import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.ui.AppBarConfiguration
+import androidx.navigation.ui.navigateUp
 import com.softic.esraa.elnajjar.R
 import com.softic.esraa.elnajjar.databinding.ActivityMainBinding
+import com.softic.esraa.elnajjar.utils.Constants.Companion.ACCESS_KEY
+import com.softic.esraa.elnajjar.utils.PreferencesUtility
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -31,7 +27,13 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
         //startUi
         setupUI()
+        setAccessKeyToSharedPref()
 
+    }
+
+    private fun setAccessKeyToSharedPref() {
+
+        PreferencesUtility.setString(this,ACCESS_KEY,"3ceeb2e38bd289e7fa0b89f98900e740" )
     }
 
     private fun setupUI() {
@@ -46,5 +48,8 @@ class MainActivity : AppCompatActivity() {
         return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
     }
 
-
+    override fun onBackPressed() {
+        super.onBackPressed()
+       TODO( /* delete preference */)
+    }
 }

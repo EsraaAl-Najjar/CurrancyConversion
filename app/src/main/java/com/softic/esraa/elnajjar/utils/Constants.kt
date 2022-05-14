@@ -1,4 +1,4 @@
-package com.softic.currenceyconversionappesraaalnajjar.utils
+package com.softic.esraa.elnajjar.utils
 
 /**
  * Created by Esraa Al-Najjar
@@ -6,8 +6,8 @@ package com.softic.currenceyconversionappesraaalnajjar.utils
 class Constants {
 
     companion object {
-        const val BASE_URL = "https://data.fixer.io/api/"
-        const val ACCESS_KEY= "3ceeb2e38bd289e7fa0b89f98900e740"
+        const val ACCESS_KEY= "access_key"
+        const val LATEST_CURRENCY_VALUE = "latest_currency"
     }
 
 }

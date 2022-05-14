@@ -7,7 +7,7 @@ plugins {
 
 android {
     compileSdk rootProject.compileSdkVersion
-    buildToolsVersion "30.0.3"
+    buildToolsVersion rootProject.buildToolsVersion
     defaultConfig {
         applicationId "com.softic.esraa.elnajjar"
         minSdk rootProject.minSdkVersion
@@ -23,7 +23,7 @@ android {
         dev {
             dimension = 'Environment'
             applicationIdSuffix = ".dev"
-            buildConfigField "String", "BASE_URL", "\"https://data.fixer.io/api/\""
+            buildConfigField "String", "BASE_URL", "\"http://data.fixer.io/api/\""
         }
         prod {
             dimension = 'Environment'
@@ -31,9 +31,6 @@ android {
         }
     }
 
-    buildFeatures {
-        viewBinding = true
-    }
     buildTypes {
         debug {
             debuggable true
@@ -70,7 +67,6 @@ dependencies {
     implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
     // Jetpack Compose Integration
     implementation "androidx.navigation:navigation-compose:$nav_version"
-
 
     //hilt
     implementation "com.google.dagger:hilt-android:$hiltVersion"

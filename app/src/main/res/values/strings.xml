@@ -23,4 +23,9 @@
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
     <string name="btn_details">Details</string>
+    <string name="default_value_for_base_1">1</string>
+    <string name="default_currency">Select Currency</string>
+    <string name="most_used_currency">USD</string>
+    <string name="err_required_value_from">Please Insert a valid amount to convert from</string>
+    <string name="err_required_value_to">Please Insert a valid amount to convert To</string>
 </resources>
